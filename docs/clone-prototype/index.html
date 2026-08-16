@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07121f">
+  <title>CLONE | Centro de Operaciones IA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div><strong>CLONE</strong><small>Commercial Intelligence</small></div>
+      </div>
+      <div class="merchant-pill"><span class="live-dot"></span><span>DEONCE Wholesale</span><small>Buenos Aires</small></div>
+      <nav>
+        <button class="nav-item active" data-view="command" aria-current="page"><span class="icon" data-icon="grid"></span><span>Centro de mando</span></button>
+        <button class="nav-item" data-view="operations"><span class="icon" data-icon="activity"></span><span>Operaciones</span><b>3</b></button>
+        <button class="nav-item" data-view="agents"><span class="icon" data-icon="nodes"></span><span>Equipo IA</span></button>
+        <button class="nav-item" data-view="approvals"><span class="icon" data-icon="check"></span><span>Aprobaciones</span><b>2</b></button>
+        <button class="nav-item" data-view="reports"><span class="icon" data-icon="file"></span><span>Informes</span></button>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="security-badge"><span class="icon" data-icon="shield"></span><div><strong>Protegido por Whitzard</strong><small>Auditoría activa · Nivel empresarial</small></div></div>
+        <button class="nav-item"><span class="icon" data-icon="settings"></span><span>Configuración</span></button>
+      </div>
+    </aside>
+
+    <main id="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir navegación"><span class="icon" data-icon="menu"></span></button>
+        <div class="crumb"><span id="viewLabel">Centro de mando</span><small>Datos actualizados hace 2 min</small></div>
+        <div class="top-actions">
+          <span class="demo-badge">Entorno de demostración</span>
+          <button class="language-switch" id="languageSwitch" aria-label="Cambiar idioma a chino" aria-pressed="false"><span class="lang-option active" data-lang-label="es">ES</span><span class="lang-divider">/</span><span class="lang-option" data-lang-label="zh">中文</span></button>
+          <button class="sync-chip" id="resetBtn"><span class="icon" data-icon="sync"></span> Reiniciar demo</button>
+          <button class="sync-chip" id="syncBtn"><span class="icon" data-icon="sync"></span> Sincronizado</button>
+          <button class="icon-btn" aria-label="Notificaciones"><span class="icon" data-icon="bell"></span><i></i></button>
+          <button class="avatar" aria-label="Perfil de Martina">MG</button>
+        </div>
+      </header>
+      <div id="viewRoot" class="view-root" tabindex="-1"></div>
+    </main>
+  </div>
+
+  <button class="ai-fab" id="aiFab" aria-label="Abrir asistente CLONE"><span class="spark" aria-hidden="true">✦</span><span>Preguntar a CLONE</span></button>
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="drawer" aria-labelledby="drawerTitle" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow" id="drawerEyebrow">DETALLE</span><h2 id="drawerTitle">Detalle de tarea</h2></div><button class="icon-btn" id="closeDrawer" aria-label="Cerrar"><span class="icon" data-icon="close"></span></button></div>
+    <div id="drawerContent" class="drawer-content"></div>
+  </aside>
+  <aside class="ai-panel" id="aiPanel" aria-labelledby="aiTitle" aria-hidden="true">
+    <div class="ai-head"><div class="ai-orb">✦</div><div><h2 id="aiTitle">CLONE Copilot</h2><small><span class="live-dot"></span> Conectado a 12 fuentes</small></div><button class="icon-btn" id="closeAi" aria-label="Cerrar asistente"><span class="icon" data-icon="close"></span></button></div>
+    <div class="chat" id="chat"><div class="message bot"><span class="mini-orb">✦</span><div><strong>Buenos días, Martina.</strong><p>Analicé las operaciones de anoche. Puedo explicar cualquier alerta o preparar una decisión para aprobación.</p></div></div></div>
+    <div class="quick-prompts"><button>¿Por qué debemos reponer hoy?</button><button>Resume los riesgos de esta semana</button><button>¿Qué hizo el equipo IA anoche?</button></div>
+    <form class="chat-form" id="chatForm"><label class="sr-only" for="chatInput">Mensaje para CLONE</label><input id="chatInput" placeholder="Preguntá sobre tu negocio..." autocomplete="off"><button aria-label="Enviar"><span class="icon" data-icon="send"></span></button></form>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="translations.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
